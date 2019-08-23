@@ -1,0 +1,155 @@
+
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+	<meta charset="utf-8"> 
+	<meta name="description" content="Bootstrap Stacked or vertical Pills Based Navigation Example">
+	<link href="/try/bootstrap/twitter-bootstrap-v2/docs/assets/css/bootstrap.css" rel="stylesheet"> 
+</head>
+<body>
+	
+<div class="container">
+	
+			<ul class="nav nav-pills nav-stacked">
+				<li class="active">
+          <div id="admin">
+            <div id ="user">
+          
+              <div id="">
+              
+                <div>
+                  
+                </div>
+              </div>
+              
+              </div>
+
+              
+          
+              
+ 
+            <h3>Group Options</h3>
+
+            
+            <div id ="group">
+              <div id="createGroup">
+                
+              </div>
+          
+              <div id="deleteGroup">
+                <h3>Delete Group</h3>
+                <form (submit)="deleteGroup(deletedGroup);">
+                    <select placeholder="Delete Group" [(ngModel)]="deletedGroup" name="delgroup">
+                      <option *ngFor="let group of groups" [value]="group.name">
+                        {{group.name}}
+                      </option>
+                    </select>
+                  <p> Selected Group to Delete:</p> <p class="highlight">{{deletedGroup}}</p>
+                  <button class ="btn btn-danger"type="submit">Delete</button>
+                </form>
+              </div>
+            </div>
+          </div>
+			</ul>
+
+</div>
+	
+</body>
+</html>
+
+
+
+
+
+<h2>Admin Dashboard</h2>
+            <h3>User Options</h3>
+<div class="container login-container">
+            <div class="row">
+                <div class="col-md-6 login-form-1">
+                    <h3>Create User</h3>
+                    <form (submit)="createUser();" id="createUser">
+                        <div class="form-group">
+                            <input name="username" class="form-control" placeholder="Username.." [(ngModel)]='username'>
+
+                        </div>
+                        <div class="form-group">
+                            <input name="email" class="form-control"placeholder="Email.." [(ngModel)]='email'>
+                        </div>
+                        <div>
+                        <select [(ngModel)]="role" name="role">
+                            <option value="user">User</option>
+                            <option value="groupAdmin">Group Admin</option>
+                            <option value="superAdmin">Super Admin</option>
+                          </select>
+                        </div><br>
+                        <button  class ="btn btn-danger" type="submit">Create</button>
+                       
+                       
+                    </form>
+                </div>
+                <div class="col-md-6 login-form-2">
+                    <h3>Delete User</h3>
+                    <form (submit)="deleteUser(deletedUser);">
+                        <select placeholder="Delete User" [(ngModel)]="deletedUser" name="deluser">
+                            <option *ngFor="let user of users" [value]="user.name">
+                              {{user.name}}
+                            </option>
+                          </select>
+                          <p> Selected User to Delete:</p> <p class="highlight">{{deletedUser}}</p>
+                    <button class ="btn btn-danger" type="submit">Delete</button>
+                    </form>
+                </div>
+                <div class="container login-container">
+                    <div class="row">
+                        <div class="col-md-6 login-form-1">
+                            <h3>Add User to Group</h3>
+                            <div class="userform">
+                                <form (submit)="addGroupUser();" id="addUser">
+                                  <p>Group</p>
+                                  <select placeholder="Add Group" [(ngModel)]='addGgroupname' name="addgroup">
+                                    <option *ngFor="let group of groups" [value]="group.name">
+                                      {{group.name}}
+                                    </option>
+                                  </select>
+                                  <br>
+                                  <p>User</p>
+                                  <select placeholder="Add User" [(ngModel)]='addGusername' name="adduser">
+                                    <option *ngFor="let user of users" [value]="user.name">
+                                      {{user.name}}
+                                    </option>
+                                  </select>
+                                  <br><br>
+                                  <button class ="btn btn-danger"  type="submit">Add</button>
+                                </form>
+                              </div>
+                        </div>
+                <div class="col-md-6 login-form-2">
+                    <h3>Create New Group</h3>
+                    <form (submit)="createGroup();">
+                        <p>Group Name</p>
+                        <input name="groupname" class="form-control" placeholder="Group Name.." [(ngModel)]='groupname'>
+                        <br>
+                        <br>
+                        <button class ="btn btn-danger"  type="submit">Create</button>
+                      </form>
+                </div>
+                <div class="col-md-6 login-form-2">
+                    <h3>Login for Form 2</h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Email *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Your Password *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btnSubmit" value="Login" />
+                        </div>
+                        <div class="form-group">
+
+                            <a href="#" class="ForgetPwd" value="Login">Forget Password?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>

@@ -1,0 +1,23 @@
+
+    <div>
+        <h1 style="text-align: center">Chat Room</h1>
+        <ng-container *ngFor="let message of messages">
+        <div id ="a"style="padding: 5px 30px 10px;">
+          <p>{{message.text}}<br>
+          </p>
+        </div>
+      </ng-container>
+
+    <div style="padding: 50px 10px 20px;">
+    <form class="bs-example bs-example-form" (submit)="sendMessage()">
+      <div class="col-lg-6">
+        <div class="input-group input-group-lg">
+          <input class="form-control" name="message" [(ngModel)]="message" placeholder="Type message here.." type="text" #newMessage>
+          <span class="input-group-btn">
+            <button class="btn btn-info" type="submit">Send</button>
+            </span>
+          </div>
+        </div>
+      </form>
+    </div>
+    </div>
