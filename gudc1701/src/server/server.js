@@ -270,7 +270,7 @@ app.post('/api/groups', (req, res) => {
 
 
 // Route to add user to group
-/*app.post('/api/addgroupuser', (req, res) => {
+app.post('/api/addgroupuser', (req, res) => {
 	fs.readFile('userdata.json', 'utf-8', function(err, data) {
 		if (err) {
 			console.log(err);
@@ -281,4 +281,4 @@ app.post('/api/groups', (req, res) => {
 			});
 		}
 	});
-});*/
+});
