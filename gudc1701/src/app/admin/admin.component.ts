@@ -268,8 +268,8 @@ export class AdminComponent implements OnInit {
 		if (this.addGusername === "" || this.addGgroupname === "") {
 			alert("You must select a User and a Group!");
 		} else {
-			alert("This feature is a work in progress!");
-			/*
+			
+			
 			const req = this.http.post('http://localhost:3000/api/addgroupuser', {})
 				.subscribe((data: any) => {
 						if (data.userData) {
@@ -283,7 +283,7 @@ export class AdminComponent implements OnInit {
 						alert('An error has occured trying to create user.')
 						console.log("Error occured");
 						return;
-					});*/
+					});
 				}
 	}
 }
